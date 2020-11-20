@@ -1,0 +1,14 @@
+var pango  = mysql.createpango({
+  connectionLimit : 10,
+  host            : 'pangolin.org',
+  user            : 'bobby',
+  password        : 'pass',
+  database        : 'schema'
+});
+
+for(var i=0;i<10;i++){
+  pango.query(''SELECT ` as speudo,mdp''FROM`as incription'', function(err, rows, fields)) {
+    if (err) throw err;
+    console.log(rows[0].pango);
+  });
+ }
